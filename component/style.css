@@ -1,0 +1,221 @@
+
+/* CSS SLIDER POR DEFECTO -- SIN PARÁMETROS DE OPCIONES */
+
+
+.slider-revolution
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+div.slider-revolution-general
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 18rem;
+    align-items: center;
+}
+
+.slider-revolution-item
+{
+    animation-name: opacity;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.slider-revolution-item.active
+{
+    position: relative;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.slider-revolution-item.close
+{
+    position: relative;
+    display: none;
+}
+
+.slider-revolution-item.slide
+{
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+
+.slider-revolution-control
+{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.slider-control-right
+{
+    background-image: url(assets/derecha64px.png);
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slider-control-right:hover
+{
+    cursor: pointer;
+}
+.slider-control-left
+{
+    background-image: url(assets/izquierda64px.png);
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slider-control-left:hover
+{
+    cursor: pointer;
+}
+
+
+.slider-revolution-indicators
+{
+    width: auto;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 23%;
+    
+}
+
+.slider-revolution-indicators div
+{
+    width: 24px;
+    height: 24px;
+}
+
+.slider-revolution-indicators div:hover
+{
+    cursor: pointer;
+}
+
+.slider.revolution-indicators, .close
+{   
+    background-image: url(assets/circulo-negro.png);
+}
+
+.slider.revolution-indicators, .active
+{   
+    background-image: url(assets/circulo.png);
+}
+
+.slider-revolution-indicators, .close:hover
+{
+    background-image: url(assets/circulo.png);
+}
+
+.slider-revolution-info
+{
+    width: auto;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -15%;
+    background-color: #000000a8;
+    color: #ffffff;
+    padding: 1%;
+    font-weight: 600;
+}
+
+
+/* CSS SLIDER POR DEFECTO -- SIN PARÁMETROS DE OPCIONES */
+
+
+/* ANIMACION PARA VALOR SLIDE */
+
+
+@keyframes opacity
+{
+    0%
+    {
+        opacity: 0
+    }
+    20%
+    {
+        opacity: 1;
+    }
+
+    40%
+    {
+        opacity: 1;
+    }
+
+    60%
+    {
+        opacity: 1;
+    }
+
+    80%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+
+
+
+@keyframes slide
+{
+    0%
+    {
+        left: 100%;
+        opacity: 0;
+    }
+    20%
+    {
+        left: 0%;
+        opacity: 1;
+    }
+    25%
+    {
+        left: 0%;
+    }
+    50%
+    {
+        left: 0%;
+
+    }
+    75%
+    {
+        left: 0%;
+
+    }
+    80%
+    {
+        left: 0%;
+        opacity: 1;
+    }
+    100%
+    {
+        left: -100%;
+        opacity: 0;
+    }
+}
